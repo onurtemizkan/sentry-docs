@@ -2,7 +2,7 @@ import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import "prism-sentry/index.css";
+import "../css/shiki.scss";
 
 import Alert from "./alert";
 import Break from "./break";
