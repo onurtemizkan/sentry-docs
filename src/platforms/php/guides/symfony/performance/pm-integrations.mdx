@@ -10,7 +10,7 @@ If the vendors (DBAL, Cache, and Twig) are installed, `enabled` will be set to `
 
 These integrations are hooking into critical paths of the framework and of the vendors. As a result, there may be a performance penalty. If you are updating from a previous version or installing the SDK, you may observe a degradation of your app performance, though it may not be noticeable. If you need to disable tracing, you can do so by setting `enabled` to `false`.
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 sentry:
   tracing:
     enabled: true
@@ -30,7 +30,7 @@ This integration supports tracking database queries as Spans. Enabling this opti
 
 It is enabled by default. To disable tracking database queries, set `enabled` to `false`.
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 sentry:
   tracing:
     dbal: # DB queries
@@ -43,7 +43,7 @@ This integration adds distributed tracing for Twig template rendering using Sent
 
 It is enabled by default. To disable it, set `enabled` to `false`.
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 sentry:
   tracing:
     twig: # templating engine
@@ -56,7 +56,7 @@ This integration adds support for distributed tracing of cache pools.
 
 It is enabled by default. To disable it, set `enabled` to `false`.
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 sentry:
   tracing:
     cache: # cache pools

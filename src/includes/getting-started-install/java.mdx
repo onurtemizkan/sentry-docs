@@ -1,4 +1,4 @@
-```groovy {filename:build.gradle}
+```groovy {filename:"build.gradle"}
 // Make sure mavenCentral is there.
 repositories {
     mavenCentral()
@@ -10,7 +10,7 @@ dependencies {
 }
 ```
 
-```xml {tabTitle:Maven}{filename:pom.xml}
+```xml {tabTitle:"Maven"}{filename:"pom.xml"}
 <dependency>
     <groupId>io.sentry</groupId>
     <artifactId>sentry</artifactId>
@@ -18,7 +18,7 @@ dependencies {
 </dependency>
 ```
 
-```scala {tabTitle:SBT}
+```scala {tabTitle:"SBT"}
 libraryDependencies += "io.sentry" % "sentry" % "{{ packages.version('sentry.java', '4.2.0') }}"
 ```
 

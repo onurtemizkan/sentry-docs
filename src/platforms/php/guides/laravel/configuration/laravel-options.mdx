@@ -10,7 +10,7 @@ All configuration for Laravel is done in `config/sentry.php`.
 
 The Laravel integration will create [breadcrumbs](../../enriching-events/breadcrumbs/) for certain events occurring in the framework, the capture of this information can be configured using the following options:
 
-```php {filename:config/sentry.php}
+```php {filename:"config/sentry.php"}
 'breadcrumbs' => [
     // Capture Laravel logs in breadcrumbs
     'logs' => true,
@@ -33,7 +33,7 @@ The Laravel integration will create [breadcrumbs](../../enriching-events/breadcr
 
 To enable performance monitoring, set this to a value greater than `0.0`:
 
-```php {filename:config/sentry.php}
+```php {filename:"config/sentry.php"}
 // Be sure to lower this in production to prevent quota issues
 'traces_sample_rate' => 1.0,
 ```
@@ -46,6 +46,6 @@ These names are generally longer than needed, that's why we strip away the base 
 
 In Laravel this is `App\Http\Controllers` by default but you can override this using the `controllers_base_namespace` option:
 
-```php {filename:config/sentry.php}
+```php {filename:"config/sentry.php"}
 'controllers_base_namespace' => env('SENTRY_CONTROLLERS_BASE_NAMESPACE', 'App\\Http\\Controllers'),
 ```

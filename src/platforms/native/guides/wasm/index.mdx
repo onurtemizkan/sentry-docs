@@ -51,7 +51,7 @@ do not yet provide a ready-to-use SDK, though we have a small integration for th
 Sentry JavaScript SDK to enhance error reports in the browser environment
 which include WASM frames, called [wasm-support.js](https://gist.github.com/mitsuhiko/c27fee8445d2a18a8c134e0169119058), which needs to be loaded _after_ the JavaScript SDK and before you start loading your WASM modules:
 
-```html {tabTitle: CDN}
+```html {tabTitle:"CDN"}
 <script
   src="https://browser.sentry-cdn.com/{{ packages.version('sentry.javascript.browser') }}/bundle.min.js"
   integrity="sha384-{{ packages.checksum('sentry.javascript.browser', 'bundle.min.js', 'sha384-base64') }}"

@@ -1,4 +1,4 @@
-```swift {tabTitle:Swift}
+```swift {tabTitle:"Swift"}
 import Sentry
 
 let eventId = SentrySDK.capture(message: "My message.")
@@ -10,7 +10,7 @@ userFeedback.name = "John Doe"
 SentrySDK.capture(userFeedback: userFeedback)
 ```
 
-```objc {tabTitle:Objective-C}
+```objc {tabTitle:"Objective-C"}
 @import Sentry;
 
 SentryId *eventId = [SentrySDK captureMessage:@"My message"];
@@ -26,7 +26,7 @@ To capture user feedback regarding a crash, use the `SentryOptions.onCrashedLast
 This callback gets called shortly after the initialization of the SDK when the last
 program execution terminated with a crash. It is not guaranteed that this is called on the main thread.
 
-```swift {tabTitle:Swift}
+```swift {tabTitle:"Swift"}
 import Sentry
 
 SentrySDK.start { options in
@@ -38,7 +38,7 @@ SentrySDK.start { options in
 
 ```
 
-```objc {tabTitle:Objective-C}
+```objc {tabTitle:"Objective-C"}
 @import Sentry;
 
 [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {

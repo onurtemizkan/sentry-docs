@@ -13,7 +13,7 @@ This is an alert
 
 </Alert>
 
-```markdown {tabTitle:Example}
+```markdown {tabTitle:"Example"}
 <Alert level="info" title="Note">
 
 This is an alert
@@ -39,7 +39,7 @@ If content is specified, it will automatically hide the content when the given `
 
 </Note>
 
-```markdown {tabTitle:Example}
+```markdown {tabTitle:"Example"}
 <ConfigKey name="send-default-pii" notSupported={["javascript", "node"]}>
 
 Description of send-default-pii
@@ -58,7 +58,7 @@ Attributes:
 
 Consecutive code blocks will be automatically collapsed into a tabulated container. This behavior is generally useful if you want to define an example in multiple languages:
 
-````markdown {tabTitle:Example}
+````markdown {tabTitle:"Example"}
 ```javascript
 function foo() {
   return "bar";
@@ -75,8 +75,8 @@ Sometimes you may not want this behavior. To solve this, you can either break up
 
 Additionally code blocks also support `tabTitle` and `filename` properties:
 
-````markdown {tabTitle:Example}
-```javascript {tabTitle: Hello} {filename: index.js}
+````markdown {tabTitle:"Example"}
+```javascript {tabTitle:"Hello"} {filename:"index.js"}
 var foo = "bar";
 ```
 ````
@@ -91,7 +91,7 @@ Something important, but maybe not _that_ important.
 
 </Note>
 
-```markdown {tabTitle:Example}
+```markdown {tabTitle:"Example"}
 <Note>
 
 Something important, but maybe not _that_ important.
@@ -105,7 +105,7 @@ See also the [Alert component](#alert).
 
 Render all child pages of this document, including their `description` if available.
 
-```markdown {tabTitle:Example}
+```markdown {tabTitle:"Example"}
 <PageGrid />
 ```
 
@@ -118,7 +118,7 @@ Attributes:
 
 Render an include based on the currently selected `platform` in context.
 
-```markdown {tabTitle:Example}
+```markdown {tabTitle:"Example"}
 <PlatformContent includePath="sdk-init" />
 ```
 
@@ -143,7 +143,7 @@ Note: This currently causes issues with tableOfContents generation, so its recom
 
 Render a section based on the currently selected `platform` in context. When the platform is not valid, the content will be hidden.
 
-```markdown {tabTitle:Example}
+```markdown {tabTitle:"Example"}
 <PlatformSection notSupported={["javascript", "node"]}>
 
 Something that applies to all platforms, but not javascript or node.
@@ -162,7 +162,7 @@ Attributes:
 
 Useful for linking to platform-specific content when there's not a specific platform already selected.
 
-```markdown {tabTitle:Example}
+```markdown {tabTitle:"Example"}
 <PlatformLink to="/enriching-events/" />
 ```
 

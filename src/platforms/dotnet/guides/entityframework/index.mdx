@@ -11,11 +11,11 @@ Sentry provides an integration with `EntityFramework` through the of the [Sentry
 
 ## Installation
 
-```powershell {tabTitle:Package Manager}
+```powershell {tabTitle:"Package Manager"}
 Install-Package Sentry.EntityFramework -Version {{ packages.version('sentry.dotnet.ef') }}
 ```
 
-```shell {tabTitle:.NET Core CLI}
+```shell {tabTitle:".NET Core CLI"}
 dotnet add package Sentry.EntityFramework -v {{ packages.version('sentry.dotnet.ef') }}
 ```
 
@@ -39,7 +39,7 @@ There are 2 steps to adding Entity Framework 6 support to your project:
 
 For example, configuring an ASP.NET app with _global.asax_:
 
-```csharp {filename:global.asax}
+```csharp {filename:"global.asax"}
 public class MvcApplication : System.Web.HttpApplication
 {
     private IDisposable _sentrySdk;

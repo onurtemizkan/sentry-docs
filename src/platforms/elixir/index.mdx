@@ -18,7 +18,7 @@ Getting started with Sentry is a three step process:
 
 Edit your mix.exs file to add it as a dependency and add the `:sentry` package to your applications:
 
-```elixir {filename:mix.exs}
+```elixir {filename:"mix.exs"}
 defp deps do
   [
     # ...
@@ -34,7 +34,7 @@ end
 
 Setup the application production environment in your `config/prod.exs`
 
-```elixir {filename:config/prod.exs}
+```elixir {filename:"config/prod.exs"}
 config :sentry,
   dsn: "___PUBLIC_DSN___",
   environment_name: :prod,

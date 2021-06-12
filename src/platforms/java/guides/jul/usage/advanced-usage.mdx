@@ -10,7 +10,7 @@ When any SLF4J implementation supporting MDC is on the classpath (for example Lo
 
 By default all MDC parameters are stored under the “MDC” tab in Sentry.
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import java.util.logging.Level;
 import org.slf4j.MDC;
 
@@ -24,7 +24,7 @@ void logWithExtras() {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import java.util.logging.Level
 import org.slf4j.MDC
 
@@ -42,7 +42,7 @@ Note that MDC manages data on a per-thread basis, and that a child thread does n
 
 ### In Practice
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -91,7 +91,7 @@ public class MyClass {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.Sentry
 import java.util.logging.Level
 import java.util.logging.Logger

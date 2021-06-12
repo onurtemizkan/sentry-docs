@@ -564,7 +564,7 @@ Object {
         },
         Object {
           "lang": "plain",
-          "meta": "{tabTitle: Hello} {filename: hello.txt}",
+          "meta": "{tabTitle: Hello} {filename:"hello.txt"}",
           "position": Position {
             "end": Object {
               "column": 4,
@@ -594,7 +594,7 @@ Object {
         },
         Object {
           "lang": "plain",
-          "meta": "{tabTitle: Goodbye} {filename: goodbye.txt}",
+          "meta": "{tabTitle: Goodbye} {filename:"goodbye.txt"}",
           "position": Position {
             "end": Object {
               "column": 4,
@@ -630,7 +630,7 @@ Object {
         },
       },
       "lang": "plain",
-      "meta": "{tabTitle: Hello} {filename: hello.txt}",
+      "meta": "{tabTitle: Hello} {filename:"hello.txt"}",
       "position": Position {
         "end": Object {
           "column": 4,

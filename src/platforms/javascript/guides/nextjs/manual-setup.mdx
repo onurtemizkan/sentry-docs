@@ -12,7 +12,7 @@ Create two files in the root directory of your project, `sentry.client.config.js
 
 For the client configuration:
 
-```javascript {filename:sentry.client.config.js}
+```javascript {filename:"sentry.client.config.js"}
 import * as Sentry from "@sentry/nextjs";
 
 const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN;
@@ -31,7 +31,7 @@ Sentry.init({
 
 And the server configuration:
 
-```javascript {filename:sentry.server.config.js}
+```javascript {filename:"sentry.server.config.js"}
 import * as Sentry from "@sentry/nextjs";
 
 const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN;
@@ -50,7 +50,7 @@ Sentry.init({
 
 If you want to instrument [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction), which run on serverless, you need to wrap your handler in our `withSentry` wrapper in order to be able to capture crashes:
 
-```javascript {filename:pages/api*}
+```javascript {filename:"pages/api*"}
 import { withSentry } from '@sentry/nextjs';
 
 const handler = async (req, res) => {
@@ -71,7 +71,7 @@ Use `withSentryConfig` to extend the default Next.js usage of Webpack. This will
 
 Include the following in your `next.config.js`:
 
-```javascript {filename:next.config.js}
+```javascript {filename:"next.config.js"}
 // This file sets a custom webpack configuration to use your Next.js app
 // with Sentry.
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
@@ -113,7 +113,7 @@ If you choose to combine the two approaches, the environment variables will take
 
 You can create a `sentry.properties` file in the base directory of your project. (This is the approach taken by the wizard.) Here is an example:
 
-```properties {filename:sentry.properties}
+```properties {filename:"sentry.properties"}
 defaults.url=https://sentry.io/
 defaults.org=___ORG_SLUG___
 defaults.project=___PROJECT_SLUG___

@@ -10,7 +10,7 @@ Make sure you've got the JavaScript SDK available:
 
 Next, create `resources/views/errors/500.blade.php`, and embed the feedback code:
 
-```html {filename:resources/views/errors/500.blade.php}
+```html {filename:"resources/views/errors/500.blade.php"}
 <div class="content">
   <div class="title">Something went wrong.</div>
 
@@ -29,7 +29,7 @@ Next, create `resources/views/errors/500.blade.php`, and embed the feedback code
 For Laravel 5 up to 5.4 there is some extra work needed. You need to open up `App/Exceptions/Handler.php` and extend the
 `render` method to make sure the 500 error is rendered as a view correctly, in 5.5+ this step is not required anymore.
 
-```php {filename:app/Exceptions/Handler.php}
+```php {filename:"app/Exceptions/Handler.php"}
 <?php
 
 use Symfony\Component\HttpKernel\Exception\HttpException;

@@ -1,6 +1,6 @@
 A `BiFunction<SentryEvent, Object, SentryEvent>` can be used to mutate, discard (return null), or return a completely new event.
 
-```java {tabTitle: Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 
 Sentry.init(options -> {
@@ -14,7 +14,7 @@ Sentry.init(options -> {
 });
 ```
 
-```kotlin {tabTitle: Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.Sentry
 import io.sentry.SentryOptions.BeforeSendCallback
 

@@ -2,22 +2,22 @@ Sentry's Spring Boot integration auto-configures `sentry.in-app-packages` proper
 
 Provide a `sentry.dsn` property using either `application.properties` or `application.yml`:
 
-```properties {filename:application.properties}
+```properties {filename:"application.properties"}
 sentry.dsn=___PUBLIC_DSN___
 ```
 
-```yaml {filename:application.yml}
+```yaml {filename:"application.yml"}
 sentry:
   dsn: ___PUBLIC_DSN___
 ```
 
 By default, every unhandled exception is sent to Sentry, even those captured with `@ExceptionHandler` annotated methods. This behavior can be tuned through configuring `sentry.exception-resolver-order` property. For example, setting it to `2147483647` (the value of `org.springframework.core.Ordered#LOWEST_PRECEDENCE`) makes sure only exceptions that have not been handled by exception resolvers with higher order are sent to Sentry.
 
-```properties {filename:application.properties}
+```properties {filename:"application.properties"}
 sentry.exception-resolver-order=2147483647
 ```
 
-```yaml {filename:application.yml}
+```yaml {filename:"application.yml"}
 sentry:
   exception-resolver-order: 2147483647
 ```

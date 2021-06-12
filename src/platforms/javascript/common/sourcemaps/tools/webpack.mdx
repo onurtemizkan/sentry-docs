@@ -9,11 +9,11 @@ Sentry provides a convenient [Webpack plugin](https://github.com/getsentry/sentr
 
 <PlatformSection notSupported={["javascript.nextjs"]}>
 
-```shell {tabTitle:npm}
+```shell {tabTitle:"npm"}
 npm install --save-dev @sentry/webpack-plugin
 ```
 
-```shell {tabTitle:yarn}
+```shell {tabTitle:"yarn"}
 yarn add --dev @sentry/webpack-plugin
 ```
 
@@ -31,7 +31,7 @@ If you’ve installed the Next.js SDK, you don’t have to install the plugin.
 
 You may configure [sentry-cli](/product/cli/configuration/) through it's documented mechanisms, or instead simply bind required parameters when initializing the plugin:
 
-```javascript {filename:webpack.config.js}
+```javascript {filename:"webpack.config.js"}
 const SentryWebpackPlugin = require("@sentry/webpack-plugin");
 
 module.exports = {

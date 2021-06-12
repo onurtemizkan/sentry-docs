@@ -20,7 +20,7 @@ composer require sentry/sentry-laravel
 
 Add the Sentry service provider and facade in `config/app.php`:
 
-```php {filename:config/app.php}
+```php {filename:"config/app.php"}
 'providers' => array(
     // ...
     'Sentry\SentryLaravel\SentryLaravelServiceProvider',
@@ -39,7 +39,7 @@ php artisan config:publish sentry/sentry-laravel
 
 Add your DSN to `config/sentry.php`:
 
-```php {filename:config/sentry.php}
+```php {filename:"config/sentry.php"}
 <?php
 
 return array(

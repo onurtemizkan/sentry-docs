@@ -13,7 +13,7 @@ To use this middleware, configure Sentry then add it to your actix web app as a 
 
 In your `Cargo.toml`:
 
-```toml {filename:Cargo.toml}
+```toml {filename:"Cargo.toml"}
 [dependencies]
 sentry = "{{ packages.version('sentry.rust') }}"
 sentry-actix = "{{ packages.version('sentry.rust') }}"
@@ -21,7 +21,7 @@ sentry-actix = "{{ packages.version('sentry.rust') }}"
 
 And your Rust code:
 
-```rust {filename:main.rs}
+```rust {filename:"main.rs"}
 use std::io;
 
 use actix_web::{get, App, Error, HttpRequest, HttpServer};

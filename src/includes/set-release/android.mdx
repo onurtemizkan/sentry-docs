@@ -1,4 +1,4 @@
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application>
   <meta-data android:name="io.sentry.release" android:value="io.example@1.1.0" />
 </application>
@@ -6,13 +6,13 @@
 
 Or, if you are manually instrumenting Sentry:
 
-```java {tabTitle: Java}
+```java {tabTitle:"Java"}
 SentryAndroid.init(this, options -> {
   options.setRelease("io.example@1.1.0");
 });
 ```
 
-```kotlin {tabTitle: Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 SentryAndroid.init(this) { options ->
   options.release = "io.example@1.1.0"
 }

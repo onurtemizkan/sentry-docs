@@ -35,14 +35,14 @@ For more details about the issue see [https://github.com/sensiolabs/SensioFramew
 
 Add your DSN to `config/packages/sentry.yaml`:
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 sentry:
     dsn: "%env(SENTRY_DSN)%"
 ```
 
 And in your `.env` file:
 
-```env {filename:.env}
+```env {filename:".env"}
 ###> sentry/sentry-symfony ###
 SENTRY_DSN="___PUBLIC_DSN___"
 ###< sentry/sentry-symfony ###
@@ -58,7 +58,7 @@ These integrations hook into critical paths of the framework and of the vendors.
 
 If you **are not** using Symfony Flex, you'll also need to enable the bundle in `config/bundles.php`:
 
-```php {filename:config/bundles.php}
+```php {filename:"config/bundles.php"}
 <?php
 
 return [
@@ -71,7 +71,7 @@ return [
 
 If you are using [Monolog](https://github.com/Seldaek/monolog) to report events instead of the typical error listener approach, you need this additional configuration to log the errors correctly:
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 sentry:
     register_error_listener: false # Disables the ErrorListener to avoid duplicated log in sentry
 
@@ -86,7 +86,7 @@ monolog:
 If you are using a version of [MonologBundle](https://github.com/symfony/monolog-bundle) prior to `3.7`, you need to
 configure the handler as a service instead:
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 monolog:
     handlers:
         sentry:
@@ -102,7 +102,7 @@ services:
 
 Additionally, you can register the `PsrLogMessageProcessor` to resolve PSR-3 placeholders in reported messages:
 
-```yaml {filename:config/packages/sentry.yaml}
+```yaml {filename:"config/packages/sentry.yaml"}
 services:
     Monolog\Processor\PsrLogMessageProcessor:
         tags: { name: monolog.processor, handler: sentry }

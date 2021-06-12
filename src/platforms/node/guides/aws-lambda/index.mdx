@@ -18,11 +18,11 @@ Create a deployment package on your local machine and install the required depen
 
 Add `@sentry/serverless` as a dependency:
 
-```bash {tabTitle:npm}
+```bash {tabTitle:"npm"}
 npm install --save @sentry/serverless
 ```
 
-```bash {tabTitle:Yarn}
+```bash {tabTitle:"Yarn"}
 yarn add @sentry/serverless
 ```
 
@@ -30,7 +30,7 @@ We also support [installing Sentry in Lambda Layer](/platforms/node/guides/aws-l
 
 You can use the AWS Lambda integration for the Node like this:
 
-```javascript {tabTitle:async}
+```javascript {tabTitle:"async"}
 const Sentry = require("@sentry/serverless");
 
 Sentry.AWSLambda.init({
@@ -46,7 +46,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler(async (event, context) => {
 });
 ```
 
-```javascript {tabTitle:sync}
+```javascript {tabTitle:"sync"}
 const Sentry = require("@sentry/serverless");
 
 Sentry.AWSLambda.init({
@@ -68,13 +68,13 @@ exports.handler = Sentry.AWSLambda.wrapHandler((event, context, callback) => {
 
 Sentry reports timeout warning when the function is within 500ms of its execution time. You can turn off timeout warnings by setting `captureTimeoutWarning` to `false` in the handler options. To change timeout warning limit, assign a numeric value (in ms) to `timeoutWarningLimit`
 
-```javascript {tabTitle:captureTimeoutWarning}
+```javascript {tabTitle:"captureTimeoutWarning"}
 exports.handler = Sentry.AWSLambda.wrapHandler(yourHandler, {
   captureTimeoutWarning: false,
 });
 ```
 
-```javascript {tabTitle:timeoutWarning}
+```javascript {tabTitle:"timeoutWarning"}
 exports.handler = Sentry.AWSLambda.wrapHandler(yourHandler, {
   timeoutWarningLimit: 50,
 });

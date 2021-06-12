@@ -7,7 +7,7 @@ type: framework
 
 Get the SDK from [pub.dev](https://pub.dev/packages/sentry) by adding the following to your `pubspec.yaml`:
 
-```yml {filename:pubspec.yaml}
+```yml {filename:"pubspec.yaml"}
 dependencies:
   sentry: ^{{ packages.version('sentry.dart') }}
 ```

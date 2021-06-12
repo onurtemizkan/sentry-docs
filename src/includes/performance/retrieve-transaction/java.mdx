@@ -2,7 +2,7 @@
 
 In cases where you want to attach Spans to an already ongoing Transaction you can use `Sentry#getSpan`. This method will return a `SentryTransaction` in case there is a running Transaction or a `Span` in case there is already a running Span, otherwise it returns `null`.
 
-```java {tabTitle: Java}
+```java {tabTitle:"Java"}
 import io.sentry.ISpan;
 import io.sentry.Sentry;
 import io.sentry.SpanStatus;
@@ -25,7 +25,7 @@ try {
 }
 ```
 
-```kotlin {tabTitle: Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.Sentry
 import io.sentry.SpanStatus
 

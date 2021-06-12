@@ -150,7 +150,7 @@ SentryAndroid.init(this, options -> {
 
 _Old_:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application>
     <meta-data android:name="io.sentry.session-tracking.enable" android:value="false" />
 </application>
@@ -158,7 +158,7 @@ _Old_:
 
 _New_:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application>
     <meta-data android:name="io.sentry.auto-session-tracking.enable" android:value="false" />
 </application>

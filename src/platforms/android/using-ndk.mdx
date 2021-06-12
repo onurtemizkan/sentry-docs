@@ -31,7 +31,7 @@ internally. As a result, this option will not work out of the box on newer Andro
 
 **Example AndroidManifest.xml**:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application
     android:allowNativeHeapPointerTagging="false"
     android:extractNativeLibs="true">
@@ -40,7 +40,7 @@ internally. As a result, this option will not work out of the box on newer Andro
 
 **Example gradle.properties**:
 
-```properties {filename:gradle.properties}
+```properties {filename:"gradle.properties"}
 android.bundle.enableUncompressedNativeLibs=false
 ```
 
@@ -52,7 +52,7 @@ To do so, use the AndroidNativeBundle Gradle plugin that copies the native libra
 
 First, we need to declare the dependency in the project build.gradle file:
 
-```groovy {filename:build.gradle}
+```groovy {filename:"build.gradle"}
 buildscript {
     repositories {
         mavenCentral()
@@ -119,7 +119,7 @@ The Sentry Gradle Plugin can be [configured](/platforms/android/proguard/#gradle
 
 You can disable the NDK integration by adding the following to your `AndroidManifest.xml`:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application>
     <meta-data android:name="io.sentry.ndk.enable" android:value="false" />
 </application>
@@ -136,7 +136,7 @@ You can use Sentry's Android SDK without the Android Native Development Kit (NDK
 
 To support the devices on the API level lower than 16, update your `AndroidManifest.xml`:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <manifest>
     <!-- Merging strategy for the imported manifests -->
     <uses-sdk tools:overrideLibrary="io.sentry.android" />

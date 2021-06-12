@@ -6,7 +6,7 @@ description: "Learn about ThreadContext parameters that display in sentry.io."
 
 By default all `ThreadContext` parameters are stored under the “Context Data” tab in sentry.io.
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import org.apache.logging.log4j.ThreadContext;
 
 void logWithExtras() {
@@ -19,7 +19,7 @@ void logWithExtras() {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import org.apache.logging.log4j.ThreadContext
 
 fun logWithExtras() {
@@ -36,7 +36,7 @@ Note that `ThreadContext` manages data on a per-thread basis, and that a child t
 
 ### In Practice
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.core.Sentry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -87,7 +87,7 @@ public class MyClass {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.core.Sentry
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.ThreadContext

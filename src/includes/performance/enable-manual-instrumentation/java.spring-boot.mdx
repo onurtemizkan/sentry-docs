@@ -6,7 +6,7 @@ Every Spring bean method execution can be turned into a transaction or a span.
 
 Every Spring bean method execution can be turned into a transaction or a span. To enable this feature, you must include `spring-boot-starter-aop` in your application:
 
-```xml {tabTitle:Maven}
+```xml {tabTitle:"Maven"}
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-aop</artifactId>
@@ -15,7 +15,7 @@ Every Spring bean method execution can be turned into a transaction or a span. T
 
 Methods executed outside of Spring MVC request processing can be turned into transactions by annotating them with `@SentryTransaction` annotation:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import org.springframework.stereotype.Component;
 import org.springframework.scheduling.annotation.Scheduled;
 import io.sentry.spring.tracing.SentryTransaction;
@@ -31,7 +31,7 @@ class ScheduledJob {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import org.springframework.stereotype.Component
 import org.springframework.scheduling.annotation.Scheduled
 import io.sentry.spring.tracing.SentryTransaction
@@ -57,7 +57,7 @@ Advanced Spring AOP users can redefine transaction pointcut by providing a custo
 
 To create a span around a method execution, annotate method with `@SentrySpan` annotation:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import org.springframework.stereotype.Component;
 import io.sentry.spring.tracing.SentrySpan;
 
@@ -71,7 +71,7 @@ class PersonService {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import org.springframework.stereotype.Component
 import io.sentry.spring.tracing.SentrySpan
 

@@ -13,7 +13,7 @@ reading [Dynamic Library Programming Topics].
 If you use dynamic frameworks, such as, for example, Sentry, the SDK marks these as `not inApp`. In case you have a private framework that should be `inApp`,
 you can use <PlatformLink to="/configuration/options/#in-app-include">inAppInclude</PlatformLink> or <PlatformLink to="/configuration/options/#in-app-exclude">inAppExclude</PlatformLink> of the SentryOptions.
 
-```swift {tabTitle:Swift}
+```swift {tabTitle:"Swift"}
 import Sentry
 
 SentrySDK.start { options in
@@ -27,7 +27,7 @@ SentrySDK.start { options in
 }
 ```
 
-```objc {tabTitle:Objective-C}
+```objc {tabTitle:"Objective-C"}
 @import Sentry;
 
 [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
@@ -51,6 +51,6 @@ originates from your application or a private framework and marks all of them as
 
 The following marks frames from libdispatch starting with `_dispatch_` as `inApp`.
 
-```discover {tabTitle:Enhancement Rules}
+```discover {tabTitle:"Enhancement Rules"}
 stack.function:_dispatch_*  +app
 ```

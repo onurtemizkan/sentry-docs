@@ -31,7 +31,7 @@ npm install --save @sentry/browser
 
 Then you can use it:
 
-```javascript {filename:index.js}
+```javascript {filename:"index.js"}
 import * as Sentry from "@sentry/browser";
 
 Sentry.init({
@@ -53,7 +53,7 @@ To capture errors or messages manually, such as to use `captureMessage` or `capt
 
 #### Usage Without Worker-Level Initialization
 
-```javascript {filename:worker.js}
+```javascript {filename:"worker.js"}
 import * as Sentry from "@sentry/browser";
 
 self.onmessage = message => {
@@ -67,7 +67,7 @@ self.onmessage = message => {
 
 #### Usage With Worker-Level Initialization
 
-```javascript {filename:worker.js}
+```javascript {filename:"worker.js"}
 import * as Sentry from "@sentry/browser";
 
 Sentry.init({

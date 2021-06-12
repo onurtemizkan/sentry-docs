@@ -10,25 +10,25 @@ The DSN is the first and most important thing to configure because it tells the 
 
 In a properties file on your filesystem or classpath (defaults to `sentry.properties`):
 
-```text {tabTitle:Properties File} {filename:sentry.properties}
+```text {tabTitle:"Properties File"} {filename:"sentry.properties"}
 dsn=___PUBLIC_DSN___
 ```
 
 Via the Java System Properties _(not available on Android)_:
 
-```bash {tabTitle:Java System Properties}
+```bash {tabTitle:"Java System Properties"}
 java -Dsentry.dsn=___PUBLIC_DSN___ -jar app.jar
 ```
 
 Via a System Environment Variable _(not available on Android)_:
 
-```bash {tabTitle:System Environment Variable}
+```bash {tabTitle:"System Environment Variable"}
 SENTRY_DSN=___PUBLIC_DSN___ java -jar app.jar
 ```
 
 In code:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 
 Sentry.init(options -> {
@@ -36,7 +36,7 @@ Sentry.init(options -> {
 });
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.Sentry.Sentry
 
 Sentry.init { options ->
@@ -59,7 +59,7 @@ There are multiple ways to configure the Java SDK, but all of them take the same
 
 To enable loading configuration from the properties file, system properties or environment variables, `enableExternalConfiguration` has to be set to `true` on `SentryOptions`:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 
 Sentry.init(options -> {
@@ -67,7 +67,7 @@ Sentry.init(options -> {
 });
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.Sentry
 
 Sentry.init { options ->
@@ -113,15 +113,15 @@ The following options can all be configured as described above: via a `sentry.pr
 
 To set the application version that will be sent with each event, use the `release` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 release=my-project-name@2.3.12
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_RELEASE='my-project-name@2.3.12'
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.release=my-project-name@2.3.12
 ```
 
@@ -129,17 +129,17 @@ sentry.release=my-project-name@2.3.12
 
 To set the application distribution that will be sent with each event, use the `dist` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 release=my-project-name@2.3.12
 dist=x86
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_RELEASE='my-project-name@2.3.12'
 SENTRY_DIST=x86
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.release=my-project-name@2.3.12
 sentry.dist=x86
 ```
@@ -150,15 +150,15 @@ The distribution is only useful (and used) if the `release` is also set.
 
 To set the application environment that will be sent with each event, use the `environment` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 environment=staging
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_ENVIRONMENT=staging
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.environment=staging
 ```
 
@@ -166,15 +166,15 @@ sentry.environment=staging
 
 To set the server name that will be sent with each event, use the `servername` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 servername=host1
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_SERVERNAME=host1
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.servername=host1
 ```
 
@@ -182,17 +182,17 @@ sentry.servername=host1
 
 To set the common tags that will be sent with each event, use the `tags` options:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 tags.first_tag=first-tag-value
 tags.second_tag=second-tag-value
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_TAGS_FIRST_TAG=first-tag-value
 SENTRY_TAGS_SECOND_TAG=second-tag-value
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.tags.first_tag=first-tag-value
 sentry.tags.second_tag=second-tag-value
 ```
@@ -201,15 +201,15 @@ sentry.tags.second_tag=second-tag-value
 
 To set the in-app-includes that will be sent with each event, use the `in-app-includes` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 in-app-includes=com.mycompany,com.other.name
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_IN_APP_INCLUDES=com.mycompany,com.other.name
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.in-app-includes=com.mycompany,com.other.name
 ```
 
@@ -217,15 +217,15 @@ sentry.in-app-includes=com.mycompany,com.other.name
 
 To set the in-app-excludes that will be sent with each event, use the `in-app-excludes` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 in-app-excludes=host1
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_IN_APP_EXCLUDES=host1
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.in-app-excludes=host1
 ```
 
@@ -233,15 +233,15 @@ sentry.in-app-excludes=host1
 
 To set the traces sample rate, use the `traces-sample-rate` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 traces-sample-rate=0.2
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_TRACES_SAMPLE_RATE=0.2
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.traces-sample-rate=0.2
 ```
 
@@ -249,15 +249,15 @@ sentry.traces-sample-rate=0.2
 
 To set Sentry in the debug mode, use the `debug` option:
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 debug=true
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_DEBUG=true
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.debug=true
 ```
 
@@ -265,7 +265,7 @@ sentry.debug=true
 
 It’s possible to manually set the connection timeouts length with `connectionTimeoutMillis` and `readTimeoutMillis`:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 
 Sentry.init(options -> {
@@ -274,7 +274,7 @@ Sentry.init(options -> {
 });
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.Sentry
 
 Sentry.init { options ->
@@ -309,7 +309,7 @@ See [Java Networking and Proxies](http://docs.oracle.com/javase/8/docs/technotes
 
 Alternatively, using Sentry options (only affects the Sentry HTTP client, useful inside shared application containers),
 
-```properties {tabTitle:sentry.properties}
+```properties {tabTitle:"sentry.properties"}
 proxy.host=proxy.example.com
 # optional
 proxy.port=8080 # default 80
@@ -317,7 +317,7 @@ proxy.user=proxy-user
 proxy.pass=proxy-password
 ```
 
-```properties {tabTitle:environment variable}
+```properties {tabTitle:"environment variable"}
 SENTRY_PROXY_HOST=proxy.example.com
 # optional
 SENTRY_PROXY_PORT=8080 # default 80
@@ -325,7 +325,7 @@ SENTRY_PROXY_USER=proxy-user
 SENTRY_PROXY_PASS=proxy-password
 ```
 
-```properties {tabTitle:system property}
+```properties {tabTitle:"system property"}
 sentry.proxy.host=proxy.example.com
 # optional
 sentry.proxy.port=8080 # default 80

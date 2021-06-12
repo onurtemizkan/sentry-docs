@@ -13,7 +13,7 @@ Add `@sentry/serverless` as a dependency to `package.json`:
 
 To set up Sentry for a Google Cloud Function:
 
-```javascript {tabTitle:http functions}
+```javascript {tabTitle:"http functions"}
 const Sentry = require("@sentry/serverless");
 
 Sentry.GCPFunction.init({
@@ -30,7 +30,7 @@ exports.helloHttp = Sentry.GCPFunction.wrapHttpFunction((req, res) => {
 });
 ```
 
-```javascript {tabTitle:background functions}
+```javascript {tabTitle:"background functions"}
 const Sentry = require("@sentry/serverless");
 
 Sentry.GCPFunction.init({
@@ -49,7 +49,7 @@ exports.helloEvents = Sentry.GCPFunction.wrapEventFunction(
 );
 ```
 
-```javascript {tabTitle:cloudEvents}
+```javascript {tabTitle:"cloudEvents"}
 const Sentry = require("@sentry/serverless");
 
 Sentry.GCPFunction.init({

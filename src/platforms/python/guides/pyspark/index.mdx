@@ -37,7 +37,7 @@ The spark worker integration is supported for Spark 2.4.0 and above.
 
 Create a file called `sentry-daemon.py` with the following content:
 
-```python {filename:sentry-daemon.py}
+```python {filename:"sentry-daemon.py"}
 import sentry_sdk
 from sentry_sdk.integrations.spark import SparkWorkerIntegration
 import pyspark.daemon as original_daemon

@@ -15,19 +15,19 @@ The DSN is the first and most important thing to configure because it tells the 
 
 In a properties file on your filesystem or classpath (defaults to `sentry.properties`):
 
-```text {tabTitle:Properties File} {filename:sentry.properties}
+```text {tabTitle:"Properties File"} {filename:"sentry.properties"}
 dsn=___PUBLIC_DSN___
 ```
 
 Via the Java System Properties _(not available on Android)_:
 
-```bash {tabTitle:Java System Properties}
+```bash {tabTitle:"Java System Properties"}
 java -Dsentry.dsn=___PUBLIC_DSN___ -jar app.jar
 ```
 
 Via a System Environment Variable _(not available on Android)_:
 
-```bash {tabTitle:System Environment Variable}
+```bash {tabTitle:"System Environment Variable"}
 SENTRY_DSN=___PUBLIC_DSN___ java -jar app.jar
 ```
 

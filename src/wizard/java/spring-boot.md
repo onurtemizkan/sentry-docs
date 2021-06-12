@@ -23,7 +23,7 @@ Install using either Maven or Gradle:
 
 ### Gradle
 
-```groovy {tabTitle:Gradle}
+```groovy {tabTitle:"Gradle"}
 implementation 'io.sentry:sentry-spring-boot-starter:{{ packages.version('sentry.java.spring-boot', '4.0.0') }}'
 ```
 
@@ -56,7 +56,7 @@ If you use Logback for logging you may also want to send error logs to Sentry. A
 
 ### Gradle
 
-```groovy {tabTitle:Gradle}
+```groovy {tabTitle:"Gradle"}
 implementation 'io.sentry:sentry-logback:{{ packages.version('sentry.java.logback', '4.0.0') }}'
 ```
 

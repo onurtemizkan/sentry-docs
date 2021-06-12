@@ -1,6 +1,6 @@
 For example, initialize in the `Main` method in `Program.cs`:
 
-```csharp {filename:Program.cs}
+```csharp {filename:"Program.cs"}
 using (SentrySdk.Init(o => {
     // Tells which project in Sentry to send events to:
     o.Dsn = "___PUBLIC_DSN___";
@@ -14,7 +14,7 @@ using (SentrySdk.Init(o => {
 }
 ```
 
-```fsharp {filename:Program.fs}
+```fsharp {filename:"Program.fs"}
 use __ = SentrySdk.Init (fun o ->
     o.Dsn <- "___PUBLIC_DSN___"
     // When configuring for the first time, to see what the SDK is doing:

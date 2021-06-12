@@ -8,7 +8,7 @@ description: "Learn more about passing configuration options to a static Sentry#
 
 ## Installation
 
-```xml {tabTitle:Maven}
+```xml {tabTitle:"Maven"}
 <dependency>
     <groupId>io.sentry</groupId>
     <artifactId>sentry</artifactId>
@@ -16,11 +16,11 @@ description: "Learn more about passing configuration options to a static Sentry#
 </dependency>
 ```
 
-```groovy {tabTitle:Gradle}
+```groovy {tabTitle:"Gradle"}
 implementation 'io.sentry:sentry:{{ packages.version('sentry.java', '4.2.0') }}'
 ```
 
-```scala {tabTitle:SBT}
+```scala {tabTitle:"SBT"}
 libraryDependencies += "io.sentry" % "sentry" % "{{ packages.version('sentry.java', '4.2.0') }}"
 ```
 
@@ -34,7 +34,7 @@ For other dependency managers see the [central Maven repository](https://search.
 
 When Sentry is used in manual way, configuration options must be passed to a static `Sentry#init` method:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 
 public class MyClass {
@@ -89,7 +89,7 @@ public class MyClass {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.SentryOptions.BeforeBreadcrumbCallback
 import io.sentry.SentryOptions.BeforeSendCallback
 

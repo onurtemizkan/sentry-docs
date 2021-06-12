@@ -18,7 +18,7 @@ composer require sentry/sentry-laravel
 
 Register Sentry in `bootstrap/app.php`:
 
-```php {filename:bootstrap/app.php}
+```php {filename:"bootstrap/app.php"}
 $app->register('Sentry\Laravel\ServiceProvider');
 
 # Sentry must be registered before routes are included
@@ -27,7 +27,7 @@ require __DIR__ . '/../app/Http/routes.php';
 
 Add Sentry reporting to `app/Exceptions/Handler.php`:
 
-```php {filename:app/Exceptions/Handler.php}
+```php {filename:"app/Exceptions/Handler.php"}
 public function report(Exception $exception)
 {
     if (app()->bound('sentry') && $this->shouldReport($exception)) {
@@ -40,7 +40,7 @@ public function report(Exception $exception)
 
 Create the Sentry configuration file (`config/sentry.php`):
 
-```php {filename:config/sentry.php}
+```php {filename:"config/sentry.php"}
 <?php
 
 return array(

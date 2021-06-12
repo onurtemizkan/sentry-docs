@@ -27,7 +27,7 @@ This integration tracks out-of-memory crashes based on heuristics. This feature 
 
 This example removes the default-enabled integration for adding breadcrumbs to the event:
 
-```swift {tabTitle:Swift}
+```swift {tabTitle:"Swift"}
 import Sentry
 
 SentrySDK.start { options in
@@ -37,7 +37,7 @@ SentrySDK.start { options in
 }
 ```
 
-```objc {tabTitle:Objective-C}
+```objc {tabTitle:"Objective-C"}
 @import Sentry;
 
 NSMutableArray *integrations = [SentryOptions defaultIntegrations].mutableCopy;

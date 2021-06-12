@@ -7,11 +7,11 @@ type: framework
 
 Add `@sentry/node` as a dependency:
 
-```bash {tabTitle:npm}
+```bash {tabTitle:"npm"}
 npm install --save @sentry/node
 ```
 
-```bash {tabTitle:Yarn}
+```bash {tabTitle:"Yarn"}
 yarn add @sentry/node
 ```
 

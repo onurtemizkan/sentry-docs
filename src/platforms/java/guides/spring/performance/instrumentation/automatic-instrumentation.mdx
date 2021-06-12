@@ -16,7 +16,7 @@ Capturing transactions requires that you first <PlatformLink to="/performance/">
 
 Sentry Spring integration, once enabled, captures each incoming Spring MVC HTTP request and turns it into a transaction with `SentryTracingFilter`. Transaction names follow pattern `<HTTP method> <Spring MVC route>`, for example for a request to a following controller:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,7 +31,7 @@ class HelloController {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -52,7 +52,7 @@ Each sampled request executed by this controller method will be turned into a tr
 
 Sentry Spring integration provides `SentrySpanClientHttpRequestInterceptor` that creates a span for each outgoing HTTP request executed with a `RestTemplate`. To use instrumented `RestTemplate` make sure to set interceptor on the `RestTemplate` bean:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.IHub;
 import io.sentry.spring.tracing.SentrySpanClientHttpRequestInterceptor;
 import java.util.Collections;
@@ -75,7 +75,7 @@ class AppConfig {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.IHub
 import io.sentry.spring.tracing.SentrySpanClientHttpRequestInterceptor
 import org.springframework.context.annotation.Bean

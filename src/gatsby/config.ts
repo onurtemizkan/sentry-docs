@@ -44,26 +44,9 @@ const getPlugins = () => {
       },
     },
     {
-      resolve: "gatsby-remark-prismjs",
+      resolve: "gatsby-remark-shiki-twoslash",
       options: {
-        noInlineHighlight: true,
-        languageExtensions: [
-          {
-            language: "discover",
-            definition: {
-              comment: /#.*/,
-              string: {
-                pattern: /("[^"]*"|(?<=:)\S+)/,
-                greedy: true,
-              },
-              boolean: /\b(?:true|false|yes|no)\b/,
-              variable: /\{\{.*?\}\}/,
-              keyword: /\b([^:\s]*?)(?=:)\b/,
-              number: /[+-]?\b\d+(?:\.\d+)?(?:[eE][+-]?\d+)?\b|\b0x[\dA-Fa-f]+\b|\b0xK[\dA-Fa-f]{20}\b|\b0x[ML][\dA-Fa-f]{32}\b|\b0xH[\dA-Fa-f]{4}\b/,
-              punctuation: /[{}[\];(),.!*=<>]/,
-            },
-          },
-        ],
+        theme: "nord",
       },
     },
     // {

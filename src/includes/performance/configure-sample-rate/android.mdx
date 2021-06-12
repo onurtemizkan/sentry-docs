@@ -1,6 +1,6 @@
 Or alternatively:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application>
   <meta-data android:name="io.sentry.traces.sample-rate" android:value="1.0" />
 </application>
@@ -8,7 +8,7 @@ Or alternatively:
 
 Or, if you are manually instrumenting Sentry:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.android.core.SentryAndroid;
 
 SentryAndroid.init(this, options -> {
@@ -23,7 +23,7 @@ SentryAndroid.init(this, options -> {
 });
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.android.core.SentryAndroid
 import io.sentry.SentryOptions.TracesSamplerCallback
 

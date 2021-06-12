@@ -7,7 +7,7 @@ type: framework
 
 Sentry captures data by using an SDK within your application’s runtime. Add the following to your `pubspec.yaml`:
 
-```yml {filename:pubspec.yaml}
+```yml {filename:"pubspec.yaml"}
 dependencies:
   sentry_flutter: ^{{ packages.version('sentry.dart.flutter') }}
 ```

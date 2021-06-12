@@ -2,7 +2,7 @@ To enable tracing, include the `BrowserTracing` integration in your SDK configur
 
 After configuration, you will see both `pageload` and `navigation` transactions in the Sentry UI.
 
-```javascript {tabTitle: ESM}
+```javascript {tabTitle:"ESM"}
 // If you're using one of our integration packages, like `@sentry/react` or `@sentry/angular`,
 // substitute its name for `@sentry/browser` here
 import * as Sentry from "@sentry/browser";
@@ -24,7 +24,7 @@ Sentry.init({
 });
 ```
 
-```javascript {tabTitle: CDN}
+```javascript {tabTitle:"CDN"}
 Sentry.init({
   dsn: "___PUBLIC_DSN___",
 

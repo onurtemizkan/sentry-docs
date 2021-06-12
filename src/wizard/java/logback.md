@@ -82,7 +82,7 @@ Last, create an intentional error, so you can test that everything is working:
 
 ### Java
 
-```java {tabTitle: Java}
+```java {tabTitle:"Java"}
 import java.lang.Exception;
 import io.sentry.Sentry;
 

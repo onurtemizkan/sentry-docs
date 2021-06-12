@@ -1,6 +1,6 @@
 The `sentry-spring` library provides `@EnableSentry` annotation that registers all required Spring beans. `@EnableSentry` can be placed on any class annotated with [@Configuration](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html) including the main entry class in Spring Boot applications annotated with [@SpringBootApplication](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html).
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.spring.EnableSentry;
 // NOTE: Replace the test DSN below with YOUR OWN DSN to see the events from this app in your Sentry
 // project/dashboard
@@ -10,7 +10,7 @@ class SentryConfiguration {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.spring.EnableSentry
 // NOTE: Replace the test DSN below with YOUR OWN DSN to see the events from this app in your Sentry
 // project/dashboard
@@ -25,7 +25,7 @@ Once this integration is configured you can _also_ use Sentry’s static API, [a
 
 By default, every unhandled exception is sent to Sentry, even those captured with `@ExceptionHandler` annotated methods. This behavior can be tuned through configuring `exceptionResolverOrder` property on `@EnableSentry` annotation. For example, setting it to `Ordered.LOWEST_PRECEDENCE` makes sure only exceptions that have not been handled by exception resolvers with higher order are sent to Sentry.
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.spring.EnableSentry;
 import org.springframework.core.Ordered;
 // NOTE: Replace the test DSN below with YOUR OWN DSN to see the events from this app in your Sentry
@@ -38,7 +38,7 @@ class SentryConfiguration {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.spring.EnableSentry
 import org.springframework.core.Ordered
 // NOTE: Replace the test DSN below with YOUR OWN DSN to see the events from this app in your Sentry

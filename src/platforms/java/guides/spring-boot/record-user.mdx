@@ -10,11 +10,11 @@ Record user information from an HTTP request or by registering a Spring bean for
 
 To record the user's IP address and `Principal#name` as the username, set the personal information flag to `true`.
 
-```properties {tabTitle:application.properties}
+```properties {tabTitle:"application.properties"}
 sentry.send-default-pii=true
 ```
 
-```yaml {tabTitle:application.yml}
+```yaml {tabTitle:"application.yml"}
 sentry:
   send-default-pii: true
 ```

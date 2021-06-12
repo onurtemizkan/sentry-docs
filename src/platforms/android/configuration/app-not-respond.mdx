@@ -14,7 +14,7 @@ Sentry does not report the ANR if the application is in debug mode.
 
 You can turn off monitoring the ANR by adding the following to your `AndroidManifest.xml`:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application>
     <meta-data android:name="io.sentry.anr.enable" android:value="false" />
 </application>
@@ -22,7 +22,7 @@ You can turn off monitoring the ANR by adding the following to your `AndroidMani
 
 You can also specify how long the thread should be blocked before the ANR is reported. Provide the duration in the attribute `io.sentry.anr.timeout-interval-mills` in your `AndroidManifest.xml`:
 
-```xml {filename:AndroidManifest.xml}
+```xml {filename:"AndroidManifest.xml"}
 <application>
     <meta-data android:name="io.sentry.anr.timeout-interval-mills" android:value="2000" />
 </application>

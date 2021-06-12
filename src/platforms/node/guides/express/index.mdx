@@ -8,11 +8,11 @@ description: "Learn about using Sentry with Express."
 
 Add `@sentry/node` as a dependency:
 
-```bash {tabTitle:npm}
+```bash {tabTitle:"npm"}
 npm install --save @sentry/node
 ```
 
-```bash {tabTitle:Yarn}
+```bash {tabTitle:"Yarn"}
 yarn add @sentry/node
 ```
 
@@ -141,11 +141,11 @@ app.use(Sentry.Handlers.errorHandler() as express.ErrorRequestHandler);
 
 ## Monitor Performance
 
-```bash {tabTitle:npm}
+```bash {tabTitle:"npm"}
 npm install --save @sentry/node @sentry/tracing
 ```
 
-```bash {tabTitle:Yarn}
+```bash {tabTitle:"Yarn"}
 yarn add @sentry/node @sentry/tracing
 ```
 
@@ -163,11 +163,11 @@ Sentry.init({
     // enable HTTP calls tracing
     new Sentry.Integrations.Http({ tracing: true }),
     // enable Express.js middleware tracing
-    new Tracing.Integrations.Express({ 
+    new Tracing.Integrations.Express({
       // to trace all requests to the default router
-      app, 
+      app,
       // alternatively, you can specify the routes you want to trace:
-      // router: someRouter, 
+      // router: someRouter,
     }),
   ],
 

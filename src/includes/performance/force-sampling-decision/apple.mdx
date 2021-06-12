@@ -1,15 +1,15 @@
-```swift {tabTitle:Swift}
+```swift {tabTitle:"Swift"}
 import Sentry
 
 let transactionContext = TransactionContext(name:"GET /search", operation:"http", sampled: .yes)
 let transaction = SentrySDK.startTransaction(transactionContext: transactionContext)
 ```
 
-```objc {tabTitle:Objective-C}
+```objc {tabTitle:"Objective-C"}
 @import Sentry;
 
 // IsSampled -> yes
-SentryTransactionContext *transactionContext = [[TransactionContext alloc] initWithName:@"GET /search" 
+SentryTransactionContext *transactionContext = [[TransactionContext alloc] initWithName:@"GET /search"
                                                                               operation:@"http"
                                                                                 sampled:kSentrySampleDecisionYes];
 

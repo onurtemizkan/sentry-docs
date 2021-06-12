@@ -10,7 +10,7 @@ It’s possible to add extra data to events thanks to [the MDC system provided b
 
 By default all MDC parameters are stored under the “MDC” tab in Sentry.
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import org.slf4j.MDC;
 
 void logWithExtras() {
@@ -23,7 +23,7 @@ void logWithExtras() {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import org.slf4j.MDC
 
 fun logWithExtras() {
@@ -40,7 +40,7 @@ Note that MDC manages data on a per-thread basis, and that a child thread does n
 
 ### In Practice
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
@@ -88,7 +88,7 @@ public class MyClass {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.core.Sentry
 import org.slf4j.LoggerFactory
 import org.slf4j.MDC

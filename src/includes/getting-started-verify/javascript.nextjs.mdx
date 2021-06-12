@@ -1,6 +1,6 @@
 Add a button to a frontend component that throws an error:
 
-```javascript {filename:pages/index.js}
+```javascript {filename:"pages/index.js"}
 <button type="button" onClick={() => {
     throw new Error("Sentry Frontend Error");
 }}>
@@ -10,7 +10,7 @@ Add a button to a frontend component that throws an error:
 
 And throw an error in an API route:
 
-```javascript {filename:pages/api/hello.js}
+```javascript {filename:"pages/api/hello.js"}
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { withSentry } from '@sentry/nextjs';
 

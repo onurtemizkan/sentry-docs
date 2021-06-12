@@ -1,4 +1,4 @@
-```swift {tabTitle:Swift}
+```swift {tabTitle:"Swift"}
 SentrySDK.start { options in
     options.tracesSampler = { context in
         if /* make a decision based on `samplingContext` */ {
@@ -15,7 +15,7 @@ SentrySDK.start { options in
 }
 ```
 
-```objc {tabTitle:Objective-C}
+```objc {tabTitle:"Objective-C"}
 [SentrySDK startWithConfigureOptions:^(SentryOptions * options) {
     options.tracesSampler = ^NSNumber * _Nullable(SentrySamplingContext * _Nonnull samplingContext) {
         if (/* make a decision based on `samplingContext` */) {

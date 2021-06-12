@@ -12,7 +12,7 @@ To record the user's IP address and `Principal#name` as the username so you can 
 
 1. Set the personal information flag on `@EnableSentry` to `true`.
 
-```Java {tabTitle:Java}
+```Java {tabTitle:"Java"}
 import org.springframework.context.annotation.Configuration;
 import io.sentry.spring.EnableSentry;
 
@@ -22,7 +22,7 @@ class SentryConfiguration {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import org.springframework.context.annotation.Configuration
 import io.sentry.spring.EnableSentry
 
@@ -163,7 +163,7 @@ class SecuritySentryConfig {
 
 To record custom user information, you can register a bean that implements `SentryUserProvider` interface.
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import org.springframework.stereotype.Component;
 import io.sentry.core.protocol.User;
 import io.sentry.spring.SentryUserProvider;
@@ -178,7 +178,7 @@ class CustomSentryUserProvider implements SentryUserProvider {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import org.springframework.stereotype.Component
 import io.sentry.core.protocol.User
 import io.sentry.spring.SentryUserProvider

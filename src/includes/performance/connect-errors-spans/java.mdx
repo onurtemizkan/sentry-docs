@@ -14,7 +14,7 @@ We have dedicated performance features for our [Spring](/platforms/java/guides/s
 
 Errors reported to Sentry while transaction or span **bound to the scope** is running are linked automatically:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 import io.sentry.ISpan;
 
@@ -28,7 +28,7 @@ try {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.Sentry
 
 val span = Sentry.startTransaction(item.getTransactionName(), "task", true)
@@ -43,7 +43,7 @@ try {
 
 Exceptions may be thrown within spans that can finish before exception gets reported to Sentry. To attach span information to this exception, you must link it by calling setThrowable method:
 
-```java {tabTitle:Java}
+```java {tabTitle:"Java"}
 import io.sentry.Sentry;
 import io.sentry.ISpan;
 
@@ -61,7 +61,7 @@ try {
 }
 ```
 
-```kotlin {tabTitle:Kotlin}
+```kotlin {tabTitle:"Kotlin"}
 import io.sentry.Sentry
 
 val span = Sentry.getSpan()?: Sentry.startTransaction(item.getTransactionName(), "task")

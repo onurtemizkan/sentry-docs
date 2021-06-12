@@ -13,11 +13,11 @@ Without any code change, this package is able to initialize the Sentry SDK and c
 
 Add the Sentry dependency:
 
-```powershell {tabTitle:Package Manager}
+```powershell {tabTitle:"Package Manager"}
 Install-Package Sentry.Log4Net -Version {{ packages.version('sentry.dotnet.log4net') }}
 ```
 
-```shell {tabTitle:.NET Core CLI}
+```shell {tabTitle:".NET Core CLI"}
 dotnet add package Sentry.Log4Net -v {{ packages.version('sentry.dotnet.log4net') }}
 ```
 
@@ -28,7 +28,7 @@ This package extends `Sentry` main SDK. That means besides the log4net `Appender
 Once the log4net integration package is installed in your project, you can modify your configuration file to add the appender.
 This can be done, for example, via the `app.config` for console and desktop apps or `web.config` in case of ASP.NET.
 
-```xml {filename:app.config}
+```xml {filename:"app.config"}
   <appender name="SentryAppender" type="Sentry.Log4Net.SentryAppender, Sentry.Log4Net">
     <Dsn value="___PUBLIC_DSN___"/>
     <!--Sends the log event Identity value as the user-->
