@@ -33,7 +33,7 @@ yarn add @sentry/react
 
 You should initialize the Sentry React SDK as soon as possible during your application load up, before initializing React:
 
-```JSX
+```javascript
 import React from "react";
 import ReactDOM from "react-dom";
 import * as Sentry from "@sentry/react";
@@ -55,7 +55,7 @@ Once this is done, all unhandled exceptions are automatically captured by Sentry
 
 If you're using React 16 or above, Error Boundaries are an essential tool for defining your application's behavior in the face of errors. The `@sentry/react` package exposes an error boundary component that automatically sends JavaScript errors from inside a React component tree to Sentry. You can use the error boundary just like a regular React component.
 
-```JSX
+```javascript
 import React from "react";
 import * as Sentry from "@sentry/react";
 
@@ -70,7 +70,7 @@ Learn how to further configure and use the Sentry Error Boundary in [React Error
 
 You can trigger your first event from your development environment by raising an exception somewhere within your application. An example of this would be rendering a button:
 
-```JSX
+```javascript
 return <button onClick={methodDoesNotExist}>Break the world</button>;
 ```
 
@@ -140,7 +140,7 @@ npm install --save @sentry/react @sentry/tracing
 
 Next, initialize the integration in your call to `Sentry.init`:
 
-```JSX
+```javascript
 import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/tracing";
 Sentry.init({
@@ -156,7 +156,7 @@ Sentry.init({
 
 `@sentry/react` exports a `withProfiler` higher order component that can be used to capture React related spans for specific React components.
 
-```JSX {filename:"App.js"}
+```javascript {filename:"App.js"}
 import * as Sentry from "@sentry/react";
 
 export default Sentry.withProfiler(App);
@@ -174,7 +174,7 @@ _(New in version 5.21.0)_
 
 Sentry's performance instrumentation includes support for React Router 3, 4, and 5.
 
-```JSX
+```javascript
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
@@ -217,7 +217,7 @@ _(New in version 5.20.0)_
 
 Redux support is included in the `@sentry/react` package since version `5.20.0`. To apply Sentry to Redux, use `Sentry.createReduxEnhancer` at the same place that you initialize your Redux store.
 
-```JSX
+```javascript
 import { createStore, compose } from "redux";
 import * as Sentry from "@sentry/react";
 
